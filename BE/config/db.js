@@ -1,17 +1,13 @@
 const mongoose = require('mongoose');
-require('dotenv').config();  // Đảm bảo bạn đã sử dụng dotenv để đọc từ .env
+require('dotenv').config();
 
 const connectDB = async () => {
   try {
-    const uri = process.env.MONGO_URI;  // Kết nối với MongoDB Atlas qua URI trong .env
-    await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log('MongoDB Connected to sample_analytics');
-  } catch (error) {
-    console.error('MongoDB Connection Error:', error);
-    process.exit(1);  // Dừng ứng dụng nếu kết nối thất bại
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log('MongoDB connected');
+  } catch (err) {
+    console.error('Error connecting to MongoDB:', err.message);
+    process.exit(1);
   }
 };
 

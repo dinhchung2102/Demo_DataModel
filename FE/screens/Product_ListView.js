@@ -13,11 +13,16 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { AntDesign, FontAwesome } from "@expo/vector-icons";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { maxProductList } from "../atoms/MaxProductList";
+import { fetchProductsSelector } from "../atoms/ProductList";
+
 
 export default function Product_ListView({ navigation }) {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const translateX = useState(new Animated.Value(0))[0]; // Điều khiển di chuyển theo trục X
-  const [maxProduct, setMaxProduct] = useRecoilState(maxProductList)
+  const [maxProduct, setMaxProduct] = useState(4)
+
+  const dataProduct = useRecoilValue(fetchProductsSelector);
+
 
   useEffect(() => {
     const bannerInterval = setInterval(() => {
@@ -57,14 +62,6 @@ export default function Product_ListView({ navigation }) {
     { id: 3, name: "sssss", image: "link" },
   ];
 
-  const dataProduct = [
-    { id: 1, name: "product1", price: 880, rate: 0 },
-    { id: 2, name: "product2", price: 880, rate: 0 },
-    { id: 3, name: "product3", price: 880, rate: 0 },
-    { id: 4, name: "product4", price: 880, rate: 0 },
-    { id: 5, name: "product5", price: 880, rate: 0 },
-    { id: 6, name: "product6", price: 880, rate: 0 },
-  ];
 
   const dataBanner = [
     "https://imgur.com/k8U7USG.png",
@@ -86,17 +83,16 @@ export default function Product_ListView({ navigation }) {
       }}
     >
       <Image
-        source={{ uri: "link" }}
+        source={{ uri: item.image }}
         style={{
           width: 100,
-          height: 100,
-          backgroundColor: "red",
+          height: 95,
           marginRight: 10,
           borderTopLeftRadius: 15,
           borderBottomLeftRadius: 15,
         }}
       />
-      <View style={{ justifyContent: "center", marginRight: 120 }}>
+      <View style={{ justifyContent: "center", flex: 1 }}>
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>{item.name}</Text>
         <View style={{ flexDirection: "row" }}>
           <FontAwesome name="star" color={"#FFD700"} size={20} />
@@ -106,7 +102,7 @@ export default function Product_ListView({ navigation }) {
           <FontAwesome name="star" color={"#FFD700"} size={20} />
         </View>
       </View>
-      <View style={{ justifyContent: "center" }}>
+      <View style={{ justifyContent: "center", flex: 0.5 }}>
         <Pressable onPress={() => navigation.navigate("Checkout_Cart")}>
           <FontAwesome name="plus-circle" size={30} color={'blue'} />
         </Pressable>
@@ -193,6 +189,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    backgroundColor:'white'
   },
   header: {
     flexDirection: "row",

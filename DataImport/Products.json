@@ -1,0 +1,202 @@
+[
+  {
+    "product_id": "P001",
+    "analyst_id": "A001",
+    "name": "Electric Kettle",
+    "description": "A high-quality electric kettle with fast boiling technology.",
+    "price": 29.99,
+    "category": "Kitchen Appliances",
+    "image": "https://example.com/images/kettle.jpg",
+    "atribute": [
+      { "K": "Color", "V": "Stainless Steel" },
+      { "K": "Capacity", "V": "1.7L" },
+      { "K": "Power", "V": "1500W" }
+    ],
+    "statistical": {
+      "average_rating": 4.5,
+      "total_reviews": 128,
+      "total_views": 1000,
+      "total_searchs": 320
+    }
+  },
+  {
+    "product_id": "P002",
+    "analyst_id": "A002",
+    "name": "LED Desk Lamp",
+    "description": "A sleek LED desk lamp with adjustable brightness and USB charging port.",
+    "price": 19.99,
+    "category": "Home Decor",
+    "image": "https://example.com/images/desk-lamp.jpg",
+    "atribute": [
+      { "K": "Color", "V": "White" },
+      { "K": "Brightness", "V": "Adjustable" },
+      { "K": "USB Port", "V": "Yes" }
+    ],
+    "statistical": {
+      "average_rating": 4.2,
+      "total_reviews": 85,
+      "total_views": 700,
+      "total_searchs": 240
+    }
+  },
+  {
+    "product_id": "P003",
+    "analyst_id": "A003",
+    "name": "Wireless Mouse",
+    "description": "A comfortable wireless mouse with ergonomic design and long battery life.",
+    "price": 15.99,
+    "category": "Computer Accessories",
+    "image": "https://example.com/images/mouse.jpg",
+    "atribute": [
+      { "K": "Color", "V": "Black" },
+      { "K": "Connectivity", "V": "Wireless" },
+      { "K": "Battery", "V": "2 AA" }
+    ],
+    "statistical": {
+      "average_rating": 4.7,
+      "total_reviews": 150,
+      "total_views": 900,
+      "total_searchs": 310
+    }
+  },
+  {
+    "product_id": "P004",
+    "analyst_id": "A004",
+    "name": "Noise Cancelling Headphones",
+    "description": "Over-ear headphones with noise cancellation and premium sound quality.",
+    "price": 89.99,
+    "category": "Audio",
+    "image": "https://example.com/images/headphones.jpg",
+    "atribute": [
+      { "K": "Color", "V": "Black" },
+      { "K": "Noise Cancellation", "V": "Yes" },
+      { "K": "Battery Life", "V": "30 hours" }
+    ],
+    "statistical": {
+      "average_rating": 4.8,
+      "total_reviews": 200,
+      "total_views": 1500,
+      "total_searchs": 500
+    }
+  },
+  {
+    "product_id": "P005",
+    "analyst_id": "A005",
+    "name": "Phone Case",
+    "description": "A durable and stylish phone case compatible with iPhone 13.",
+    "price": 12.99,
+    "category": "Mobile Accessories",
+    "image": "https://example.com/images/phone-case.jpg",
+    "atribute": [
+      { "K": "Color", "V": "Blue" },
+      { "K": "Material", "V": "Silicone" },
+      { "K": "Compatibility", "V": "iPhone 13" }
+    ],
+    "statistical": {
+      "average_rating": 4.3,
+      "total_reviews": 90,
+      "total_views": 600,
+      "total_searchs": 220
+    }
+  },
+  {
+    "product_id": "P006",
+    "analyst_id": "A006",
+    "name": "4K Ultra HD TV",
+    "description": "A 55-inch 4K Ultra HD smart TV with HDR and built-in streaming apps.",
+    "price": 499.99,
+    "category": "Electronics",
+    "image": "https://example.com/images/4k-tv.jpg",
+    "atribute": [
+      { "K": "Screen Size", "V": "55 inches" },
+      { "K": "Resolution", "V": "4K" },
+      { "K": "HDR", "V": "Yes" }
+    ],
+    "statistical": {
+      "average_rating": 4.6,
+      "total_reviews": 120,
+      "total_views": 800,
+      "total_searchs": 350
+    }
+  },
+  {
+    "product_id": "P007",
+    "analyst_id": "A007",
+    "name": "Wall Mount Bracket",
+    "description": "A heavy-duty TV wall mount bracket compatible with 32-65 inch screens.",
+    "price": 29.99,
+    "category": "Furniture",
+    "image": "https://example.com/images/wall-mount.jpg",
+    "atribute": [
+      { "K": "Compatibility", "V": "32-65 inch TVs" },
+      { "K": "Material", "V": "Steel" },
+      { "K": "Adjustable", "V": "Yes" }
+    ],
+    "statistical": {
+      "average_rating": 4.1,
+      "total_reviews": 55,
+      "total_views": 300,
+      "total_searchs": 150
+    }
+  },
+  {
+    "product_id": "P008",
+    "analyst_id": "A008",
+    "name": "Portable Fan",
+    "description": "A compact and portable fan, perfect for hot summer days.",
+    "price": 19.99,
+    "category": "Home Appliances",
+    "image": "https://example.com/images/portable-fan.jpg",
+    "atribute": [
+      { "K": "Color", "V": "White" },
+      { "K": "Size", "V": "8 inches" },
+      { "K": "Power Source", "V": "Battery" }
+    ],
+    "statistical": {
+      "average_rating": 4.4,
+      "total_reviews": 75,
+      "total_views": 500,
+      "total_searchs": 180
+    }
+  },
+  {
+    "product_id": "P009",
+    "analyst_id": "A009",
+    "name": "Smartwatch",
+    "description": "A fitness tracking smartwatch with heart rate monitor and GPS.",
+    "price": 129.99,
+    "category": "Wearables",
+    "image": "https://example.com/images/smartwatch.jpg",
+    "atribute": [
+      { "K": "Color", "V": "Black" },
+      { "K": "Features", "V": "Heart Rate, GPS" },
+      { "K": "Battery Life", "V": "7 days" }
+    ],
+    "statistical": {
+      "average_rating": 4.5,
+      "total_reviews": 200,
+      "total_views": 1000,
+      "total_searchs": 420
+    }
+  },
+  {
+    "product_id": "P010",
+    "analyst_id": "A010",
+    "name": "Laptop Bag",
+    "description": "A stylish and durable laptop bag with multiple compartments.",
+    "price": 39.99,
+    "category": "Bags & Luggage",
+    "image": "https://example.com/images/laptop-bag.jpg",
+    "atribute": [
+      { "K": "Color", "V": "Grey" },
+      { "K": "Material", "V": "Canvas" },
+      { "K": "Size", "V": "15-inch Laptop" }
+    ],
+    "statistical": {
+      "average_rating": 4.3,
+      "total_reviews": 60,
+      "total_views": 450,
+      "total_searchs": 180
+    }
+  }
+]

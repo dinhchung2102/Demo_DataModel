@@ -12,7 +12,7 @@ const CustomerList = () => {
     const fetchCustomers = async () => {
       try {
         // Gửi yêu cầu GET đến API
-        const response = await fetch('http://192.168.100.70:5000/api/customers/names');
+        const response = await fetch('http://172.20.121.230:5000/api/customers/names');
         // Kiểm tra nếu có lỗi trong phản hồi (response status khác 200)
         if (!response.ok) {
           throw new Error('Failed to fetch customers');

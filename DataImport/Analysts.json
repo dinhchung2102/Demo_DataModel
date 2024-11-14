@@ -1,0 +1,72 @@
+[
+  {
+    "analyst_id": "A001",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "phone": "+1234567890",
+    "address": "123 Main St, Cityville"
+  },
+  {
+    "analyst_id": "A002",
+    "name": "Alice Smith",
+    "email": "alicesmith@example.com",
+    "phone": "+1987654321",
+    "address": "456 Oak Rd, Townsville"
+  },
+  {
+    "analyst_id": "A003",
+    "name": "Bob Johnson",
+    "email": "bobjohnson@example.com",
+    "phone": "+1122334455",
+    "address": "789 Pine Ave, Villagetown"
+  },
+  {
+    "analyst_id": "A004",
+    "name": "Charlie Brown",
+    "email": "charliebrown@example.com",
+    "phone": "+1234509876",
+    "address": "101 Maple St, Cityville"
+  },
+  {
+    "analyst_id": "A005",
+    "name": "Diana Green",
+    "email": "dianagreen@example.com",
+    "phone": "+1122335566",
+    "address": "202 Birch Ln, Seaside"
+  },
+  {
+    "analyst_id": "A006",
+    "name": "Eve White",
+    "email": "evewhite@example.com",
+    "phone": "+1345678901",
+    "address": "303 Cedar Dr, Oakwood"
+  },
+  {
+    "analyst_id": "A007",
+    "name": "Frank Harris",
+    "email": "frankharris@example.com",
+    "phone": "+1456789023",
+    "address": "404 Elm St, Rivertown"
+  },
+  {
+    "analyst_id": "A008",
+    "name": "Grace Lee",
+    "email": "gracelee@example.com",
+    "phone": "+1567890123",
+    "address": "505 Ash Blvd, Greenfield"
+  },
+  {
+    "analyst_id": "A009",
+    "name": "Henry King",
+    "email": "henryking@example.com",
+    "phone": "+1678901234",
+    "address": "606 Willow Way, Lakedale"
+  },
+  {
+    "analyst_id": "A010",
+    "name": "Ivy Moore",
+    "email": "ivymoore@example.com",
+    "phone": "+1789012345",
+    "address": "707 Spruce Cir, Hilltop"
+  }
+]

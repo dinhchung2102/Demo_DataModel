@@ -1,0 +1,82 @@
+[
+  {
+    "review_id": "R001",
+    "product_id": "P001",
+    "user_id": "U001",
+    "like": true,
+    "comment": "Great kettle! Boils water quickly and has a sleek design.",
+    "number_of_star": 5
+  },
+  {
+    "review_id": "R002",
+    "product_id": "P002",
+    "user_id": "U002",
+    "like": false,
+    "comment": "The lamp is too bright for my workspace. I expected more adjustability.",
+    "number_of_star": 2
+  },
+  {
+    "review_id": "R003",
+    "product_id": "P003",
+    "user_id": "U003",
+    "like": true,
+    "comment": "I love this wireless mouse. It's very comfortable to use for long hours.",
+    "number_of_star": 4
+  },
+  {
+    "review_id": "R004",
+    "product_id": "P004",
+    "user_id": "U004",
+    "like": true,
+    "comment": "Amazing sound quality and effective noise-cancellation. Best purchase ever!",
+    "number_of_star": 5
+  },
+  {
+    "review_id": "R005",
+    "product_id": "P005",
+    "user_id": "U005",
+    "like": false,
+    "comment": "The case doesn't fit my phone properly. Disappointed with the size.",
+    "number_of_star": 1
+  },
+  {
+    "review_id": "R006",
+    "product_id": "P006",
+    "user_id": "U006",
+    "like": true,
+    "comment": "The picture quality is fantastic, and the smart TV features work perfectly.",
+    "number_of_star": 5
+  },
+  {
+    "review_id": "R007",
+    "product_id": "P007",
+    "user_id": "U007",
+    "like": true,
+    "comment": "Easy to install and sturdy. Works great for my TV setup.",
+    "number_of_star": 4
+  },
+  {
+    "review_id": "R008",
+    "product_id": "P008",
+    "user_id": "U008",
+    "like": false,
+    "comment": "The fan is too loud, and it doesn't cool effectively.",
+    "number_of_star": 2
+  },
+  {
+    "review_id": "R009",
+    "product_id": "P009",
+    "user_id": "U009",
+    "like": true,
+    "comment": "Very helpful for my fitness tracking. The watch is accurate and stylish.",
+    "number_of_star": 5
+  },
+  {
+    "review_id": "R010",
+    "product_id": "P010",
+    "user_id": "U010",
+    "like": true,
+    "comment": "Good quality laptop bag, spacious, and durable. Worth the price.",
+    "number_of_star": 4
+  }
+]

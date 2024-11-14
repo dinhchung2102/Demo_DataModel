@@ -1,0 +1,92 @@
+[
+  {
+    "search_id": "S001",
+    "user_id": "U001",
+    "product_id": "P001",
+    "keyWord": "electric kettle",
+    "time": "2024-11-15T08:30:00",
+    "search_type": "product",
+    "results_count": 10
+  },
+  {
+    "search_id": "S002",
+    "user_id": "U002",
+    "product_id": "P003",
+    "keyWord": "wireless mouse",
+    "time": "2024-11-14T09:00:00",
+    "search_type": "product",
+    "results_count": 8
+  },
+  {
+    "search_id": "S003",
+    "user_id": "U003",
+    "product_id": "P004",
+    "keyWord": "headphones",
+    "time": "2024-11-13T10:30:00",
+    "search_type": "product",
+    "results_count": 12
+  },
+  {
+    "search_id": "S004",
+    "user_id": "U004",
+    "product_id": "P006",
+    "keyWord": "4K TV",
+    "time": "2024-11-12T14:00:00",
+    "search_type": "product",
+    "results_count": 5
+  },
+  {
+    "search_id": "S005",
+    "user_id": "U005",
+    "product_id": "P005",
+    "keyWord": "phone case",
+    "time": "2024-11-12T09:15:00",
+    "search_type": "product",
+    "results_count": 15
+  },
+  {
+    "search_id": "S006",
+    "user_id": "U006",
+    "product_id": "P007",
+    "keyWord": "wall mount",
+    "time": "2024-11-11T16:45:00",
+    "search_type": "product",
+    "results_count": 4
+  },
+  {
+    "search_id": "S007",
+    "user_id": "U007",
+    "product_id": "P008",
+    "keyWord": "fan",
+    "time": "2024-11-11T13:20:00",
+    "search_type": "product",
+    "results_count": 9
+  },
+  {
+    "search_id": "S008",
+    "user_id": "U008",
+    "product_id": "P009",
+    "keyWord": "smartwatch",
+    "time": "2024-11-10T17:10:00",
+    "search_type": "product",
+    "results_count": 6
+  },
+  {
+    "search_id": "S009",
+    "user_id": "U009",
+    "product_id": "P010",
+    "keyWord": "charger",
+    "time": "2024-11-09T12:50:00",
+    "search_type": "product",
+    "results_count": 20
+  },
+  {
+    "search_id": "S010",
+    "user_id": "U010",
+    "product_id": "P011",
+    "keyWord": "keyboard",
+    "time": "2024-11-08T19:30:00",
+    "search_type": "product",
+    "results_count": 7
+  }
+]

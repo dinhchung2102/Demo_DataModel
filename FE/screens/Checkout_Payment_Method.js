@@ -15,11 +15,10 @@ import TextHeader from "../components/TextHeader";
 
 export default function Checkout_Payment_Method({navigation}) {
   const [isPressed, setIsPressed] = useState(false);
-  const handleChooseMethod = () => {};
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <TextHeader textHeader="Payment" />
+        <TextHeader textHeader="Payment" onPress = {()=>{navigation.navigate("Product_Detail")}} />
         <Text style={{ fontSize: 20, marginTop: 80 }}>TOTAL</Text>
         <Text style={{ fontSize: 40, fontWeight: "bold" }}>$3,080</Text>
 

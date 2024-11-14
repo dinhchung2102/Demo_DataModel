@@ -1,0 +1,244 @@
+[
+  {
+    "historyPurchase_id": "HP001",
+    "user_id": "U001",
+    "time": "2024-11-15T08:30:00",
+    "total_amount": 59.98,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P001",
+        "name": "Electric Kettle",
+        "category": "Kitchen Appliances",
+        "quantity": 1,
+        "description": "A high-quality electric kettle with fast boiling technology.",
+        "price": 29.99
+      },
+      {
+        "product_id": "P002",
+        "name": "LED Desk Lamp",
+        "category": "Home Decor",
+        "quantity": 1,
+        "description": "A sleek LED desk lamp with adjustable brightness and USB charging port.",
+        "price": 19.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP002",
+    "user_id": "U002",
+    "time": "2024-11-14T09:00:00",
+    "total_amount": 89.97,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P003",
+        "name": "Wireless Mouse",
+        "category": "Computer Accessories",
+        "quantity": 1,
+        "description": "A comfortable wireless mouse with ergonomic design and long battery life.",
+        "price": 15.99
+      },
+      {
+        "product_id": "P004",
+        "name": "Noise Cancelling Headphones",
+        "category": "Audio",
+        "quantity": 1,
+        "description": "Over-ear headphones with noise cancellation and premium sound quality.",
+        "price": 89.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP003",
+    "user_id": "U003",
+    "time": "2024-11-13T10:30:00",
+    "total_amount": 119.97,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P005",
+        "name": "Phone Case",
+        "category": "Mobile Accessories",
+        "quantity": 1,
+        "description": "A durable and stylish phone case compatible with iPhone 13.",
+        "price": 12.99
+      },
+      {
+        "product_id": "P006",
+        "name": "4K Ultra HD TV",
+        "category": "Electronics",
+        "quantity": 1,
+        "description": "A 55-inch 4K Ultra HD smart TV with HDR and built-in streaming apps.",
+        "price": 499.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP004",
+    "user_id": "U004",
+    "time": "2024-11-12T14:00:00",
+    "total_amount": 29.99,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P007",
+        "name": "Wall Mount Bracket",
+        "category": "Furniture",
+        "quantity": 1,
+        "description": "A heavy-duty TV wall mount bracket compatible with 32-65 inch screens.",
+        "price": 29.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP005",
+    "user_id": "U005",
+    "time": "2024-11-12T09:15:00",
+    "total_amount": 45.98,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P008",
+        "name": "Portable Fan",
+        "category": "Home Appliances",
+        "quantity": 1,
+        "description": "A compact and portable fan, perfect for hot summer days.",
+        "price": 19.99
+      },
+      {
+        "product_id": "P009",
+        "name": "Smartwatch",
+        "category": "Wearables",
+        "quantity": 1,
+        "description": "A fitness tracking smartwatch with heart rate monitor and GPS.",
+        "price": 129.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP006",
+    "user_id": "U006",
+    "time": "2024-11-11T16:45:00",
+    "total_amount": 99.98,
+    "status": "Pending",
+    "item": [
+      {
+        "product_id": "P010",
+        "name": "Laptop Bag",
+        "category": "Bags & Luggage",
+        "quantity": 1,
+        "description": "A stylish and durable laptop bag with multiple compartments.",
+        "price": 39.99
+      },
+      {
+        "product_id": "P003",
+        "name": "Wireless Mouse",
+        "category": "Computer Accessories",
+        "quantity": 1,
+        "description": "A comfortable wireless mouse with ergonomic design and long battery life.",
+        "price": 15.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP007",
+    "user_id": "U007",
+    "time": "2024-11-10T17:10:00",
+    "total_amount": 249.98,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P004",
+        "name": "Noise Cancelling Headphones",
+        "category": "Audio",
+        "quantity": 1,
+        "description": "Over-ear headphones with noise cancellation and premium sound quality.",
+        "price": 89.99
+      },
+      {
+        "product_id": "P005",
+        "name": "Phone Case",
+        "category": "Mobile Accessories",
+        "quantity": 2,
+        "description": "A durable and stylish phone case compatible with iPhone 13.",
+        "price": 12.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP008",
+    "user_id": "U008",
+    "time": "2024-11-09T12:50:00",
+    "total_amount": 179.97,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P001",
+        "name": "Electric Kettle",
+        "category": "Kitchen Appliances",
+        "quantity": 1,
+        "description": "A high-quality electric kettle with fast boiling technology.",
+        "price": 29.99
+      },
+      {
+        "product_id": "P009",
+        "name": "Smartwatch",
+        "category": "Wearables",
+        "quantity": 1,
+        "description": "A fitness tracking smartwatch with heart rate monitor and GPS.",
+        "price": 129.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP009",
+    "user_id": "U009",
+    "time": "2024-11-08T19:30:00",
+    "total_amount": 79.99,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P007",
+        "name": "Wall Mount Bracket",
+        "category": "Furniture",
+        "quantity": 1,
+        "description": "A heavy-duty TV wall mount bracket compatible with 32-65 inch screens.",
+        "price": 29.99
+      },
+      {
+        "product_id": "P003",
+        "name": "Wireless Mouse",
+        "category": "Computer Accessories",
+        "quantity": 1,
+        "description": "A comfortable wireless mouse with ergonomic design and long battery life.",
+        "price": 15.99
+      }
+    ]
+  },
+  {
+    "historyPurchase_id": "HP010",
+    "user_id": "U010",
+    "time": "2024-11-07T08:00:00",
+    "total_amount": 119.97,
+    "status": "Completed",
+    "item": [
+      {
+        "product_id": "P006",
+        "name": "4K Ultra HD TV",
+        "category": "Electronics",
+        "quantity": 1,
+        "description": "A 55-inch 4K Ultra HD smart TV with HDR and built-in streaming apps.",
+        "price": 499.99
+      },
+      {
+        "product_id": "P008",
+        "name": "Portable Fan",
+        "category": "Home Appliances",
+        "quantity": 1,
+        "description": "A compact and portable fan, perfect for hot summer days.",
+        "price": 19.99
+      }
+    ]
+  }
+]
