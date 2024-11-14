@@ -11,8 +11,11 @@ import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import TextHeader from "../components/TextHeader";
 import { FontAwesome } from "@expo/vector-icons";
+import { useRecoilValue } from "recoil";
+import { productDetailState } from "../atoms/ProductList";
 
 export default function Product_Detail({ navigation }) {
+  const product = useRecoilValue(productDetailState);
   return (
     <SafeAreaProvider>
       <View style={styles.container}>
@@ -27,16 +30,16 @@ export default function Product_Detail({ navigation }) {
             <View style={styles.product_View}>
               <Image
                 source={{
-                  uri: "https://salt.tikicdn.com/cache/750x750/ts/product/bc/18/91/e1e87b1caaf38e4e3e44ed448cac6305.jpg.webp",
+                  uri: product.image,
                 }}
                 style={styles.productImage}
                 resizeMode="contain"
               />
               <Text style={styles.productTitle}>
-                O DAY GHI TEN SAN PHAM, CHUA SU DUNG DATA
+                {product.name}
               </Text>
               <View style={styles.productInfo}>
-                <Text style={styles.productPrice}>550.000 Đ</Text>
+                <Text style={styles.productPrice}>{product.price}$</Text>
                 <Text style={styles.productSold}>Đã bán: 10</Text>
               </View>
               <View style={styles.desView}>
@@ -44,11 +47,7 @@ export default function Product_Detail({ navigation }) {
                   Mô tả sản phẩm:
                 </Text>
                 <Text style={styles.productDescription}>
-                  KKKKKKKKKKKASDFaewfahnwfoaewijfawioawfajdfos;ịailoaewijloawhfrioaewhfriloaeqwfhlaiowf
-                  alisjufailsehfailwfh alksjbf aklsbfj
-                  aliswbfhjrualwfiugalwefhiru
-                  akuwhjlaiuwrhfailrwgua;rwoar;eioha;orw4a;ghio
-                  KKKKKKKKKKKASDFaewfahnwfoaewijfawioawfajdfos;ịailoaewijloawhfrioaewhfriloaeqwfhlaiowf
+                 {product.description}
                 </Text>
               </View>
             </View>

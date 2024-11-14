@@ -19,7 +19,7 @@ const getAnalystById = async (req, res) => {
     if (!analyst) {
       return res.status(404).json({ message: 'Analyst not found' });
     }
-    res.json(analyst);  // Trả về analyst nếu tìm thấy
+    res.json(analyst); 
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -29,7 +29,6 @@ const getAnalystById = async (req, res) => {
 const createAnalyst = async (req, res) => {
   const { analyst_id, name, email, phone, address } = req.body;
 
-  // Kiểm tra xem analyst_id đã tồn tại chưa
   const existingAnalyst = await Analyst.findOne({ analyst_id });
   if (existingAnalyst) {
     return res.status(400).json({ message: 'Analyst ID already exists' });

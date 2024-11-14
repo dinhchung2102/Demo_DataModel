@@ -13,7 +13,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { AntDesign, FontAwesome } from "@expo/vector-icons";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { maxProductList } from "../atoms/MaxProductList";
-import { fetchProductsSelector } from "../atoms/ProductList";
+import { fetchProductsSelector, productDetailState } from "../atoms/ProductList";
 
 
 export default function Product_ListView({ navigation }) {
@@ -22,6 +22,12 @@ export default function Product_ListView({ navigation }) {
   const [maxProduct, setMaxProduct] = useState(4)
 
   const dataProduct = useRecoilValue(fetchProductsSelector);
+  const [, setProductDetail] = useRecoilState(productDetailState);
+
+  const handleProductDetail = (item) =>{
+    setProductDetail(item);
+    navigation.navigate("Product_Detail")
+  }
 
 
   useEffect(() => {
@@ -71,7 +77,7 @@ export default function Product_ListView({ navigation }) {
 
 
   const renderItemProduct = ({ item }) => (
-    <Pressable onPress={()=>{navigation.navigate("Product_Detail")}}
+    <Pressable onPress={() => {handleProductDetail(item)}}
       style={{
         flexDirection: "row",
         borderRadius: 15,
