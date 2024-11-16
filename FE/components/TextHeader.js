@@ -13,7 +13,7 @@ export default class TextHeader extends Component {
             alignItems: "center",
             flexDirection: "row",
           }}>
-        <Pressable style={{position:'absolute'}} onPress={onPress}>
+        <Pressable style={{position:'absolute', flex: 0.15}} onPress={onPress}>
             <FontAwesome name="angle-left" size={30}/>
         </Pressable>
         <View style={{ flex: 1, alignItems: 'center' }}>
