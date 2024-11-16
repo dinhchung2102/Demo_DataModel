@@ -62,13 +62,6 @@ export default function Product_ListView({ navigation }) {
   }, [translateX]);
 
 
-  const dataCate = [
-    { id: 1, name: "chung", image: "link" },
-    { id: 2, name: "name", image: "link" },
-    { id: 3, name: "sssss", image: "link" },
-  ];
-
-
   const dataBanner = [
     "https://imgur.com/k8U7USG.png",
     "https://www.arnavsoftech.com/assets/img/android-apps.jpg",
