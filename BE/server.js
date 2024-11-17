@@ -7,6 +7,7 @@ const productRoutes = require('./routes/productRoutes');
 const analystRoutes = require('./routes/analystRoutes');  
 const reviewRoutes = require('./routes/reviewRoutes');
 const userRoutes = require('./routes/userRoutes');
+const historyPurchaseRoutes = require('./routes/historyPurchaseRoutes');
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/analysts', analystRoutes);  
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/historyPurchases', historyPurchaseRoutes);
 
 // Khởi động server
 const PORT = process.env.PORT || 5000;

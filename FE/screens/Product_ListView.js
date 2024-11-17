@@ -9,27 +9,22 @@ import {
   Animated,
 } from "react-native";
 import React, { useState, useEffect } from "react";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { AntDesign, FontAwesome } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { maxProductList } from "../atoms/MaxProductList";
 import {
   fetchProductsSelector,
   productDetailState,
-  reviewsState,
-  userNameByReview,
 } from "../atoms/ProductList";
 import HeaderAccount from "../components/HeaderAccount";
 import SearchBar from "../components/SearchBar";
 
 export default function Product_ListView({ navigation }) {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
-  const translateX = useState(new Animated.Value(0))[0]; // Điều khiển di chuyển theo trục X
+  const translateX = useState(new Animated.Value(0))[0]; 
   const [maxProduct, setMaxProduct] = useState(4);
 
   const dataProduct = useRecoilValue(fetchProductsSelector);
   const [, setProductDetail] = useRecoilState(productDetailState);
-  const userName = useRecoilValue(userNameByReview);
 
 
   const handleProductDetail = (item) => {
@@ -39,36 +34,35 @@ export default function Product_ListView({ navigation }) {
 
   useEffect(() => {
     const bannerInterval = setInterval(() => {
-      // Di chuyển từ bên phải sang bên trái
+      
       Animated.sequence([
-        // Di chuyển ra ngoài màn hình
+       
         Animated.timing(translateX, {
-          toValue: -400, // Di chuyển banner ra ngoài (hoặc giá trị chiều rộng của banner)
-          duration: 1000, // Thời gian di chuyển chậm lại (1 giây)
+          toValue: -400, 
+          duration: 1000, 
           useNativeDriver: true,
         }),
-        // Reset về vị trí ban đầu và thay đổi banner
+       
         Animated.timing(translateX, {
-          toValue: 400, // Di chuyển banner ra ngoài bên phải
-          duration: 0, // Không cần thời gian cho bước này, chỉ thay đổi vị trí
+          toValue: 400, 
+          duration: 0, 
           useNativeDriver: true,
         }),
         Animated.timing(translateX, {
-          toValue: 0, // Đưa banner trở lại vị trí ban đầu
-          duration: 1000, // Thời gian di chuyển từ từ (1 giây)
+          toValue: 0, 
+          duration: 1000, 
           useNativeDriver: true,
         }),
       ]).start();
 
-      // Cập nhật chỉ số banner sau khi hoàn thành animation
+     
       setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % dataBanner.length);
-    }, 3000); // Thời gian chuyển banner (3s)
-
+    }, 3000); 
     return () => clearInterval(bannerInterval); // Dọn dẹp khi component unmount
   }, [translateX]);
 
   const dataBanner = [
-    "https://imgur.com/k8U7USG.png",
+    "https://www.arnavsoftech.com/assets/img/android-apps.jpg",
     "https://www.arnavsoftech.com/assets/img/android-apps.jpg",
     "https://www.mindstask.com/en/wp-content/uploads/2022/03/android-app-half-banner.jpg",
   ];

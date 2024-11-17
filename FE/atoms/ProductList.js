@@ -17,6 +17,7 @@ export const fetchProductsSelector = selector({
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
+      
       const data = await response.json();
       return data;  
     } catch (error) {
@@ -54,32 +55,33 @@ export const reviewsSelector = selector({
   },
 });
 //================================
-export const userNameByReview = selector({
-  key: 'userNameByReview',
+export const countProductSelector = selector({
+  key: "countProduct",
   get: async ({ get }) => {
-    const reviews = get(reviewsSelector);  
+    const productDetail = get(productDetailState);  
 
-    if (!reviews || reviews.length === 0) {
-      return [];
+    // Kiểm tra xem productDetail có tồn tại không
+    if (!productDetail) {
+      return 0;  // Nếu không có sản phẩm, trả về 0 (hoặc có thể là giá trị mặc định khác)
     }
 
-    // Lấy user_id từ mỗi review và gọi API để lấy thông tin người dùng
-    const userPromises = reviews.map(async (review) => {
-      const response = await fetch(`http://192.168.100.70:5000/api/users/${review.user_id}`);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch user with user_id ${review.user_id}`);
-      }
-      const user = await response.json();
-      return user ? user.name : 'Unknown User';  // Trả về tên người dùng hoặc 'Unknown User' nếu không tìm thấy
-    });
-
     try {
-      // Chờ tất cả các promise hoàn thành và trả về mảng tên người dùng
-      const userNames = await Promise.all(userPromises);
-      return userNames;
+      // Gọi API để lấy tổng số lượng sản phẩm từ lịch sử mua hàng
+      const response = await fetch(`http://192.168.100.70:5000/api/historyPurchases/product/quantity/${productDetail.product_id}`);
+
+      if (!response.ok) {
+        throw new Error("Failed to get quantity");
+      }
+
+      // Parse kết quả JSON và trả về total_quantity
+      const historyQuantity = await response.json();
+
+      // Kiểm tra nếu có trường total_quantity trong response
+      return historyQuantity.total_quantity || 0;
+
     } catch (error) {
-      console.error(error);
-      return [];
+      console.log(error);
+      return 0;  // Nếu có lỗi, trả về 0
     }
   },
 });

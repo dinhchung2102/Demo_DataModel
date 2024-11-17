@@ -78,5 +78,21 @@
     "like": true,
     "comment": "Good quality laptop bag, spacious, and durable. Worth the price.",
     "number_of_star": 4
+  },
+  {
+    "review_id": "R011",
+    "product_id": "P001",
+    "user_id": "U010",
+    "like": false,
+    "comment": "Cái ấm nước màu trắng mà tận 30 đô? Quá tệ, quá đểu",
+    "number_of_star": 4
+  },
+  {
+    "review_id": "R012",
+    "product_id": "P001",
+    "user_id": "U010",
+    "like": false,
+    "comment": "Giao nhanh, xứng đáng với giá tiền. shipper thân thiện",
+    "number_of_star": 4
   }
 ]

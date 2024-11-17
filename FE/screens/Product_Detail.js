@@ -8,22 +8,20 @@ import {
   ScrollView,
 } from "react-native";
 import React from "react";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import TextHeader from "../components/TextHeader";
 import { FontAwesome } from "@expo/vector-icons";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
+  countProductSelector,
   productDetailState,
   reviewsSelector,
-  reviewsState,
-  userNameByReview,
+
 } from "../atoms/ProductList";
 import HeaderAccount from "../components/HeaderAccount";
 
 export default function Product_Detail({ navigation }) {
   const product = useRecoilValue(productDetailState);
   const reviews =  useRecoilValue(reviewsSelector);
-  const userNames =  useRecoilValue(userNameByReview);
+  const countProduct = useRecoilValue(countProductSelector);
 
   
   const renderItemReview = ({ item }) => (
@@ -36,7 +34,7 @@ export default function Product_Detail({ navigation }) {
           style={{ width: 50, height: 50 }}
         />
         <View style={{ marginTop: 3, marginLeft: 3 }}>
-          <Text style={{ fontWeight: "bold" }}>{userNames}</Text>          
+          <Text style={{ fontWeight: "bold" }}>{item.name}</Text>          
           <View
             style={{
               flexDirection: "row",
@@ -91,7 +89,7 @@ export default function Product_Detail({ navigation }) {
           <Text style={styles.productTitle}>{product.name}</Text>
           <View style={styles.productInfo}>
             <Text style={styles.productPrice}>{product.price}$</Text>
-            <Text style={styles.productSold}>Đã bán: 10</Text>
+            <Text style={styles.productSold}>Đã bán: {countProduct}</Text>
           </View>
           <View style={styles.desView}>
             <Text style={styles.productDescriptionTitle}>Mô tả sản phẩm:</Text>

@@ -43,7 +43,7 @@ export default function Checkout_Cart({navigation}) {
         </View>
         <View style={{ justifyContent: "center" }}>
           <Pressable>
-            <FontAwesome name="pencil" size={20} />
+            <FontAwesome name="pencil" size={20}/>
           </Pressable>
           <Text style={{ fontSize: 20 }}>x{1}</Text>
         </View>

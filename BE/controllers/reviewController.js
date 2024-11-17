@@ -1,5 +1,6 @@
 // /controllers/reviewController.js
 const Review = require('../models/reviewModel');
+const User = require('../models/userModel');
 
 
 const getAllReviews = async (req, res) => {
@@ -23,16 +24,46 @@ const getAllReviews = async (req, res) => {
 const getReviewsByProductId = async (req, res) => {
   try {
     const { product_id } = req.params;
+
+    // Lấy tất cả các review cho product_id
     const reviews = await Review.find({ product_id });
-    if (!reviews) {
+
+    // Nếu không có review nào
+    if (reviews.length === 0) {
       return res.status(404).json({ message: 'No reviews found for this product' });
     }
-    return res.json(reviews);
+
+    // Lấy tất cả user_id trong reviews
+    const userIds = reviews.map(review => review.user_id);
+
+    // Truy vấn tất cả người dùng dựa trên user_id
+    const users = await User.find({ user_id: { $in: userIds } });
+
+    // Tạo một map từ user_id sang username
+    const userMap = users.reduce((map, user) => {
+      map[user.user_id] = user.name;
+      return map;
+    }, {});
+
+    // Duyệt qua các review và thay thế user_id bằng username từ userMap
+    const reviewsWithUsernames = reviews.map(review => ({
+      review_id: review.review_id,
+      product_id: review.product_id,
+      like: review.like,
+      comment: review.comment,
+      number_of_star: review.number_of_star,
+      // Thay vì trả về user_id, trả về username
+      name: userMap[review.user_id] || 'Anonymous',
+    }));
+
+    return res.json(reviewsWithUsernames);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Server error' });
   }
 };
+
+
 
 // Tạo mới một review
 const createReview = async (req, res) => {
