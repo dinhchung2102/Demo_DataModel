@@ -28,6 +28,7 @@ export default function Product_ListView({ navigation }) {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const translateX = useState(new Animated.Value(0))[0]; 
   const [maxProduct, setMaxProduct] = useState(4);
+  const [btnSeemore, setBtnSeemore] = useState('SEE MORE');
 
   const handleProductDetail = (item) => {
     setProductDetail(item);
@@ -155,10 +156,23 @@ export default function Product_ListView({ navigation }) {
       <Pressable
         style={styles.buttonSeeAll}
         onPress={() => {
-          setMaxProduct((preProduct) => preProduct + 2);
+          if (maxProduct < dataProduct.length) {
+            setMaxProduct((prevProduct) => {
+              const newMaxProduct = prevProduct + 4;
+              if (newMaxProduct >= dataProduct.length) {
+                setBtnSeemore("Thu gọn");  
+              } else {
+                setBtnSeemore("Xem thêm"); 
+              }
+              return newMaxProduct;  
+            });
+          } else {
+            setMaxProduct(4)
+            setBtnSeemore("Xem thêm");  
+          }
         }}
       >
-        <Text style={styles.txtBtnFilter}>SEE ALL</Text>
+        <Text style={styles.txtBtnFilter}>{btnSeemore}</Text>
       </Pressable>
       </ScrollView>
     </View>

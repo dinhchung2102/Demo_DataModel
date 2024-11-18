@@ -43,11 +43,6 @@ const SearchBar = () => {
           returnKeyType="search" 
         />
       </View>
-      <Pressable style={{alignItems:'center', justifyContent:'center', marginRight:10, backgroundColor:'black', height:45 , width:60, borderRadius: 10}}
-        onPress={handleSearch}
-      >
-          <Text style={{fontSize: 20,color:'white', fontWeight:'bold'}}>Tìm</Text>
-        </Pressable>
       <Pressable style={{ justifyContent: 'center' }}>
         <FontAwesome name="list-ul" size={30} />
       </Pressable>
