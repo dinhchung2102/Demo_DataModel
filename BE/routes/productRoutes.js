@@ -6,15 +6,9 @@ const productController = require('../controllers/productController');
 router.get('/', productController.getAllProducts);
 
 // Lấy một sản phẩm theo ID
-router.get('/:id', productController.getProductById);
+router.get('/:product_id', productController.getProductByProductId);
 
-// Thêm một sản phẩm mới
-router.post('/', productController.createProduct);
-
-// Cập nhật một sản phẩm theo ID
-router.put('/:id', productController.updateProduct);
-
-// Xóa một sản phẩm theo ID
-router.delete('/:id', productController.deleteProduct);
+//Search\
+router.get('/search/:keyword', productController.searchProductsByKeyword);
 
 module.exports = router;

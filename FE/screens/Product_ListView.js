@@ -13,24 +13,27 @@ import { FontAwesome } from "@expo/vector-icons";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   fetchProductsSelector,
+  filterProducts,
   productDetailState,
 } from "../atoms/ProductList";
 import HeaderAccount from "../components/HeaderAccount";
 import SearchBar from "../components/SearchBar";
 
 export default function Product_ListView({ navigation }) {
-  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
-  const translateX = useState(new Animated.Value(0))[0]; 
-  const [maxProduct, setMaxProduct] = useState(4);
 
   const dataProduct = useRecoilValue(fetchProductsSelector);
   const [, setProductDetail] = useRecoilState(productDetailState);
+  const [filterProductsData, setFilterProductsData] = useRecoilState(filterProducts);
 
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  const translateX = useState(new Animated.Value(0))[0]; 
+  const [maxProduct, setMaxProduct] = useState(4);
 
   const handleProductDetail = (item) => {
     setProductDetail(item);
     navigation.navigate("Product_Detail");
   };
+
 
   useEffect(() => {
     const bannerInterval = setInterval(() => {
@@ -144,7 +147,7 @@ export default function Product_ListView({ navigation }) {
 
           
       <View style={styles.listProduct}>
-        {dataProduct.slice(0, maxProduct).map((item, index) => (
+        {filterProductsData.slice(0, maxProduct).map((item, index) => (
           <View key={item.id || index}>{renderItemProduct({ item })}</View>
         ))}
       </View>

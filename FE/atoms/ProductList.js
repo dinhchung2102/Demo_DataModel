@@ -1,6 +1,6 @@
-// atoms/products.js
 
 import { atom, selector, useRecoilValue } from 'recoil';
+
 
 // Atom lưu trữ dữ liệu sản phẩm
 export const productsState = atom({
@@ -13,7 +13,7 @@ export const fetchProductsSelector = selector({
   key: 'fetchProductsSelector',  
   get: async ({ get }) => {
     try {
-      const response = await fetch('http://192.168.100.70:5000/api/products');
+      const response = await fetch(`http://192.168.100.70:5000/api/products`);
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
@@ -60,29 +60,47 @@ export const countProductSelector = selector({
   get: async ({ get }) => {
     const productDetail = get(productDetailState);  
 
-    // Kiểm tra xem productDetail có tồn tại không
     if (!productDetail) {
-      return 0;  // Nếu không có sản phẩm, trả về 0 (hoặc có thể là giá trị mặc định khác)
+      return 0;  
     }
 
     try {
-      // Gọi API để lấy tổng số lượng sản phẩm từ lịch sử mua hàng
       const response = await fetch(`http://192.168.100.70:5000/api/historyPurchases/product/quantity/${productDetail.product_id}`);
 
       if (!response.ok) {
         throw new Error("Failed to get quantity");
       }
-
-      // Parse kết quả JSON và trả về total_quantity
       const historyQuantity = await response.json();
 
-      // Kiểm tra nếu có trường total_quantity trong response
       return historyQuantity.total_quantity || 0;
 
     } catch (error) {
       console.log(error);
-      return 0;  // Nếu có lỗi, trả về 0
+      return 0;  
     }
   },
 });
+
+export const filterProductsSelector = selector({
+  key: 'filterProductsSelector',
+  get: ({ get }) => {
+    const searchQuery = get(filterProducts);
+    const products = get(fetchProductsSelector); 
+
+    if (!searchQuery) {
+      return products;
+    }
+
+    return products.filter(product =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  },
+});
+//============
+
+export const filterProducts = atom({
+  key:"filterProducts",
+  default:[]
+})
+
 
