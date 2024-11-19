@@ -1,5 +1,5 @@
 
-import { atom, selector, useRecoilValue } from 'recoil';
+import { atom, selector } from 'recoil';
 
 
 // Atom lưu trữ dữ liệu sản phẩm

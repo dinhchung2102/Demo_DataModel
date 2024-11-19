@@ -18,12 +18,14 @@ import {
 } from "../atoms/ProductList";
 import HeaderAccount from "../components/HeaderAccount";
 import SearchBar from "../components/SearchBar";
+import {userInfoSelector} from '../atoms/User'
 
 export default function Product_ListView({ navigation }) {
 
   const dataProduct = useRecoilValue(fetchProductsSelector);
   const [, setProductDetail] = useRecoilState(productDetailState);
   const [filterProductsData, setFilterProductsData] = useRecoilState(filterProducts);
+  const userInfo = useRecoilValue(userInfoSelector)
 
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const translateX = useState(new Animated.Value(0))[0]; 

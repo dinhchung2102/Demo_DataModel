@@ -16,7 +16,7 @@ export default function App() {
     <RecoilRoot>
       <NavigationContainer style={styles.container}>
         <Stack.Navigator
-          initialRouteName="Register"
+          initialRouteName="Login"
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Product_ListView" component={Product_ListView} />
