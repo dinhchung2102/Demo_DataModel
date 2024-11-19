@@ -1,0 +1,117 @@
+[
+	{
+"phone": "admin",
+"password": "admin",
+"role": "admin"
+}
+  ,
+  {
+    "phone": "+1234567890",
+    "password": "userpassword1",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567891",
+    "password": "userpassword2",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567892",
+    "password": "userpassword3",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567893",
+    "password": "userpassword4",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567894",
+    "password": "userpassword5",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567895",
+    "password": "userpassword6",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567896",
+    "password": "userpassword7",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567897",
+    "password": "userpassword8",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567898",
+    "password": "userpassword9",
+    "role": "user"
+  },
+  {
+    "phone": "+1234567899",
+    "password": "userpassword10",
+    "role": "user"
+  },
+
+  {
+    "phone": "janesmith",
+    "password": "password456",
+    "role": "analyst"
+  },
+  {
+    "phone": "+2234567890",
+    "password": "password1",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1987654321",
+    "password": "password2",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1122334455",
+    "password": "password3",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1234509876",
+    "password": "password4",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1122335566",
+    "password": "password5",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1345678901",
+    "password": "password6",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1456789023",
+    "password": "password7",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1567890123",
+    "password": "password8",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1678901234",
+    "password": "password9",
+    "role": "analyst"
+  },
+  {
+    "phone": "+1789012345",
+    "password": "password10",
+    "role": "analyst"
+  }
+
+
+  
+]
